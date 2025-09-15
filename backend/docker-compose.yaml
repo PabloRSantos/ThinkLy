@@ -1,0 +1,40 @@
+version: "3"
+services:
+  app:
+    container_name: app
+    hostname: app
+    build: .
+    env_file:
+      - .env
+    networks:
+      - app_net
+    volumes:
+      - ./src:/app/src
+      - ./package.json:/app/package.json
+      - ./tsconfig.json:/app/tsconfig.json
+    links:
+      - database
+    depends_on:
+      - database
+
+  database:
+    container_name: database
+    hostname: database
+    env_file:
+      - .env
+    image: postgres:17
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    expose:
+      - "5432"
+    volumes:
+      - ./database-setup.sql:/docker-entrypoint-initdb.d/database-setup.sql
+    networks:
+      - app_net
+
+networks:
+  app_net:
+    driver: bridge
