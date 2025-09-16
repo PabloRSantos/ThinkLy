@@ -40,19 +40,22 @@
    ```bash
    cp .env.example .env
    ```
-   - A chave HUGGINGFACE_API_KEY é invalidada de tempos em tempos por segurança, caso a criação de tópicos resulte em erro, será necessário criar uma nova key
 
-3. **Inicie a aplicação e o banco de dados usando Docker Compose:**
+3. **Preencha as API_KEYS:**
+   - **HUGGINGFACE_API_KEY:** Gere sua chave em [HuggingFace - Access Tokens](https://huggingface.co/settings/tokens)
+   - **WEATHER_API_KEY:** Gere sua chave em [OpenWeather - API Keys](https://home.openweathermap.org/api_keys)
+
+4. **Inicie a aplicação e o banco de dados usando Docker Compose:**
 
    ```bash
    docker-compose up
    ```
 
-4. **Acesse a API:**
+5. **Acesse a API:**
    - A API estará disponível em [http://localhost:3000](http://localhost:3000) por padrão.
    - Documentação Swagger disponível em [http://localhost:3000/api](http://localhost:3000/api).
 
-5. **Banco de Dados:**
+6. **Banco de Dados:**
    - O PostgreSQL roda na porta `5432`.
    - Usuário padrão: `postgres`
    - Senha padrão: `postgres`
