@@ -15,7 +15,6 @@ export function useDeleteInsightById(insightId: number) {
       queryClient.removeQueries({ queryKey: ["insights", insightId] });
       queryClient.setQueryData(["insights"], (old: InsightModel[]) => {
         if (!old) return old;
-        console.log(old, insightId);
         return old.filter((item) => item.id !== insightId);
       });
 

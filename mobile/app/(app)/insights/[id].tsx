@@ -153,7 +153,6 @@ export default function InsightDetail() {
             size="lg"
             action="negative"
             onPress={() => {
-              console.log("delete");
               setShowDeleteConfirmationAlert(true);
             }}
           >

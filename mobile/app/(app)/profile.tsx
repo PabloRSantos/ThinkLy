@@ -49,14 +49,12 @@ export default function Profile() {
     useState(false);
 
   const deleteUser = (): void => {
-    console.log("deleteUser");
     deleteUserMutate(
       {
         password,
       },
       {
         onSuccess: () => {
-          console.log("onSuccess");
           toast.show({
             id: Math.random().toString(),
             placement: "top",
@@ -75,7 +73,6 @@ export default function Profile() {
           logout();
         },
         onError: () => {
-          console.log("onError");
           toast.show({
             id: Math.random().toString(),
             placement: "top",
