@@ -40,6 +40,7 @@
    ```bash
    cp .env.example .env
    ```
+   - A chave HUGGINGFACE_API_KEY é invalidada de tempos em tempos por segurança, caso a criação de tópicos resulte em erro, será necessário criar uma nova key
 
 3. **Inicie a aplicação e o banco de dados usando Docker Compose:**
 
