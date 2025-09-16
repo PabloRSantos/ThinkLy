@@ -7,14 +7,7 @@ As documentações detalhadas de cada parte do sistema estão disponíveis nos a
 
 ## Vídeos Demonstrativos
 
-### Login
-<video src=".github/videos/login.mp4" controls width="600"></video>
-
-### Cadastro
-<video src=".github/videos/sign-up.mp4" controls width="600"></video>
-
-### Criação de Insight
-<video src=".github/videos/create-insight.mp4" controls width="600"></video>
-
-### Exclusão de Usuário
-<video src=".github/videos/delete-user.mp4" controls width="600"></video>
+- [Login](.github/videos/login.mp4)
+- [Cadastro (Sign Up)](.github/videos/sign-up.mp4)
+- [Criação de Insight](.github/videos/create-insight.mp4)
+- [Exclusão de Usuário](.github/videos/delete-user.mp4)
