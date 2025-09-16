@@ -70,6 +70,7 @@ export default function SignUp() {
         setIsShowModal(true);
 
         setTimeout(() => {
+          setIsShowModal(false);
           setUser(data.user);
           setToken(data.token);
         }, 2500);
